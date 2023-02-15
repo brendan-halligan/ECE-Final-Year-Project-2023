@@ -2,6 +2,7 @@ import os
 import random
 import shutil
 
+
 dirPath = "D:/extracted_frames"
 destDirectory = "random_selected_images"
 
