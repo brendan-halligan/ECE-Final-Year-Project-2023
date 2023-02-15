@@ -10,7 +10,7 @@ count = 0
 while success:
     success, frame = video.read()
 
-    # Extract all frames as pngs,saving each image to a folder
+    # Extract all frames as pngs, saving each image to a folder
     # Name each frame using a standardised number format
     if count < 10:
         name = "./extracted_frames/frame_00000" + str(count) + ".png"
