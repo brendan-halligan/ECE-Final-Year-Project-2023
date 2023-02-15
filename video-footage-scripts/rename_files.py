@@ -10,5 +10,4 @@ def randomize_files(dir):
             newpath = os.path.join(dir, ''.join([choice(ascii_lowercase) for _ in range(randint(6, 10))]))
             os.rename(path, newpath + ".png")
 
-
 randomize_files("extracted_frames")
