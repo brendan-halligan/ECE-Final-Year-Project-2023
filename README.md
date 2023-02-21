@@ -13,8 +13,8 @@ The project is implemented in Python and can operate in real-time, making it pot
 <br>
 
 <details>
-  <summary>Object Detection and Tracking</summary>
-  <h2>Object Detection and Tracking</h2>
+  <summary>Training a YOLOv7 Model using a Custom Dataset</summary>
+  <h2>Training a YOLOv7 Model using a Custom Dataset</h2>
   For this project, a custom dataset was developed to train a You Only Look Once (YOLO) model. The dataset comprised 500 annotated training images, as well as a further 100 validation images. Upon training the model, a mAP@0.5 score of 0.956 was recorded, indicating a high level of accurac.
   
   <p align="center">
@@ -35,8 +35,8 @@ The project is implemented in Python and can operate in real-time, making it pot
 
 
 <details>
-  <summary>Collision Prediction</summary>
-  <h2>Collision Prediction</h2>
+  <summary>Object Tracking and Collision Prediction</summary>
+  <h2>Object Tracking and Collision Prediction</h2>
   A Simple Online and Realtime Tracking (SORT) algorithm is used in this application to track objects and calculate their speed and trajectory. A Kalman filter is used to improve the estimate the location of each detected object in the current frame, based on its previous locations and motion. 
   
   <p align="center">
