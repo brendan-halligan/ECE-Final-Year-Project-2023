@@ -1,3 +1,4 @@
+import cv2
 import math
 import pathlib
 import torch
@@ -483,6 +484,7 @@ if __name__ == "__main__":
             """
             Define the latitude and longitude boundary coordinates of the specified video footage in Degrees Minutes 
             Seconds format.
+            Coordinates are hardcoded from Google Maps for this specific application.
             """
             LATITUDE_TOP_LEFT     = dms_to_dd(53, 17, 22, 'N')
             LATITUDE_BOTTOM_LEFT  = dms_to_dd(53, 17, 22, 'N')
