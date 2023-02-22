@@ -13,7 +13,7 @@ def generate_heat_map(save_path):
     moving objects in a frame.
 
     :param save_path: Path to the source video footage.
-    :return:          None.
+    :return:          None
     """
     print("Beginning HeatMapping Process...")
 
@@ -50,6 +50,9 @@ def generate_heat_map(save_path):
             filtered_image = background_subtractor.apply(frame)
             kernel         = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7))
             filtered_image = cv2.morphologyEx(filtered_image, cv2.MORPH_OPEN, kernel)
+
+            if i == 80:
+                cv2.imwrite("./background_subtraction.png", filtered_image)
 
             # Set the threshold intensity of the heatmap.
             threshold = 2
