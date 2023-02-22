@@ -1,0 +1,2 @@
+# Use This:
+python detect_and_track.py --weights best.pt --source "video name.mp4"
