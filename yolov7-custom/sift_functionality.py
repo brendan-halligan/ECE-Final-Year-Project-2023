@@ -54,10 +54,10 @@ def perform_sift_location_check(path_to_video_file):
     Each keypoint of the first image is matched with a number of key points from the second image. The two best matches
     for each keypoint (i.e. the matches with the smallest distance) are kept.
     Lowe's test checks that the two distances are sufficiently different. If they are not, then the keypoint is 
-    eliminated and will not be used fro future matches.
+    eliminated and will not be used for future matches.
     """
     good_points = []
-    ratio       = 0.6
+    ratio       = 0.7
     for m, n in matches:
         if m.distance < ratio * n.distance:
             good_points.append([m])
@@ -76,7 +76,7 @@ def perform_sift_location_check(path_to_video_file):
     print("Number of Good Matches: ",  len(good_points))
 
     # If the number of matches is above a certain threshold, then both images are said to be of the same location.
-    if len(good_points) > 30:
+    if len(good_points) > 100:
         print("The images are of the same location")
         return True
     else:
