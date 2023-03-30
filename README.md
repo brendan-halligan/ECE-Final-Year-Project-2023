@@ -38,7 +38,7 @@ The resulting dynamic environment mapping information will provide a comprehensi
 
 <details>
   <summary>Object Tracking and Instantaneous Collision Detection</summary>
-  <h2>Object Tracking and Collision Prediction</h2>
+  <h2>Object Tracking and Instantaneous Collision Detection</h2>
   A Simple Online and Realtime Tracking (SORT) algorithm is used in this application to track objects and calculate their speed and trajectory. A Kalman filter is used to improve the estimate the location of each detected object in the current frame, based on its previous locations and motion. 
   
   <p align="center">
