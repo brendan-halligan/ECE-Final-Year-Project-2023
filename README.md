@@ -1,21 +1,23 @@
-# ECE Final Year Project 2023: Vehicle Detection and Collision Prediction
+# ECE Final Year Project 2023: Aerially Determined Dynamic Environment Mapping Information to Enhance Road Vehicle Awareness
 
 <p align="center">
   <img width="600" alt="gif" src="https://user-images.githubusercontent.com/125507627/219214471-77abf121-0086-44e4-935b-875e9383a8c3.gif">
 </p>
 
-This final year project involves the research and development of an application that can detect vehicles, cyclists and pedestrians in real-time using YOLOv7, an advanced object detection algorithm, and OpenCV, a computer vision library. In addition to detecting and tracking vehicles, the system can predict potential collisions between the detected objects based on their alculated speeds, positions and movements. 
+This final year project aims to develop an innovative application to derive dynamic environment mapping information from aerial footage, with the objective of enhancing situational awareness for safe and efficient operation of autonomous road vehicles. The application will utilize YOLOv7, a cutting-edge object detection algorithm, and OpenCV, a powerful computer vision library, to detect and track vehicles, cyclists, and pedestrians. 
+
+The application will calculate the speed and angle of movement of each tracked object, enabling the determination of their instantaneous trajectories, allowing for the identification of any potential collisions.
 
 The application incorporates a motion heatmap via Intel's Motion Heatmap technology, and Degree Minute Second (DMS) coordinate mapping using a Scale-Invariant Feature Transform (SIFT) to further track objects.
 
-The project is implemented in Python and can operate in real-time, making it potentially suitable for several applications, including traffic monitoring and surveillance. These applications are particularly relevant due to the advancement of 5G networks within the autonomous vehicle sphere. 
+The resulting dynamic environment mapping information will provide a comprehensive, highresolution understanding of the surrounding environment which may be used to enhance road vehicle awareness. 
 
 <br>
 
 <details>
   <summary>Training a YOLOv7 Model using a Custom Dataset</summary>
   <h2>Training a YOLOv7 Model using a Custom Dataset</h2>
-  For this project, a custom dataset was developed to train a You Only Look Once (YOLO) model. The dataset comprised 500 annotated training images, as well as a further 100 validation images. Upon training the model, a mAP@0.5 score of 0.956 was recorded, indicating a high level of accurac.
+  For this project, a custom dataset was developed to train a You Only Look Once (YOLO) model. The dataset comprised 500 annotated training images, as well as a further 100 validation images. Upon training the model, a mAP@0.5 score of 0.956 was recorded, indicating a high level of accuracY.
   
   <p align="center">
     <br>
@@ -35,7 +37,7 @@ The project is implemented in Python and can operate in real-time, making it pot
 
 
 <details>
-  <summary>Object Tracking and Collision Prediction</summary>
+  <summary>Object Tracking and Instantaneous Collision Detection</summary>
   <h2>Object Tracking and Collision Prediction</h2>
   A Simple Online and Realtime Tracking (SORT) algorithm is used in this application to track objects and calculate their speed and trajectory. A Kalman filter is used to improve the estimate the location of each detected object in the current frame, based on its previous locations and motion. 
   
@@ -46,7 +48,7 @@ The project is implemented in Python and can operate in real-time, making it pot
   
   The number of pixels per metre is subsequently determined to calculate the speed of each object. Once tracked, each object's speed is kept in a dictionary with its ID as the key. 
   
-  The Collision Detection Algorithm utilises the predicted trajectory of tracked objects to anticipate collisions. The trajectory is determined by the
+  The Collision Detection Algorithm utilises the instantaneous trajectory of tracked objects to anticipate collisions. The trajectory is determined by the
 angle of an object's movement and the speed of the object. The endpoint of the trajectory can be found using trigonometric laws. 
   
   <p align="center">
