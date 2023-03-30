@@ -10,7 +10,7 @@ The application will calculate the speed and angle of movement of each tracked o
 
 The application incorporates a motion heatmap via Intel's Motion Heatmap technology, and Degree Minute Second (DMS) coordinate mapping using a Scale-Invariant Feature Transform (SIFT) to further track objects.
 
-The resulting dynamic environment mapping information will provide a comprehensive, highresolution understanding of the surrounding environment which may be used to enhance road vehicle awareness. 
+The resulting dynamic environment mapping information will provide a comprehensive, high-resolution understanding of the surrounding environment which may be used to enhance road vehicle awareness. 
 
 <br>
 
